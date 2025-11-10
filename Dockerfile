@@ -12,3 +12,9 @@
 
                 # Run the Main class
                 CMD java HelloWorld
+                
+                FROM openjdk:23
+                WORKDIR /app
+                COPY src/ /app/
+                RUN javac *.java
+                CMD ["java", "HelloWorld"]
